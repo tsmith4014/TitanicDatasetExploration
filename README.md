@@ -60,9 +60,9 @@ To run the analysis code and explore the project, follow these steps:
 4. Explore the generated visualizations and insights.
 
 ## Requirements 
-  Python 3.x
-  Jupyter Notebook (optional)
-  Libraries listed in requirements.txt
+  1. Python 3.x
+  2. Jupyter Notebook (optional)
+  3  Libraries listed in requirements.txt
 
 ## License
 This project is licensed under the MIT License. You are free to use, modify, or distribute this code for any purpose.
