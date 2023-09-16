@@ -77,7 +77,7 @@ To run the analysis code and explore the project, follow these steps:
    ```bash
    python -m venv venv
    source venv/bin/activate
-   git clone https://github.com/your-username/titanic-dataset-analysis.git
+   git clone https://github.com/tsmith4014/TitanicDatasetExploration.git
    cd titanic
    pip install -r requirements.txt
 
