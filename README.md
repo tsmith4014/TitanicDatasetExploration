@@ -67,7 +67,7 @@ In this project, we've created two predictive models to estimate the likelihood 
 
 We fitted a logistic regression model to predict survival. This model takes into account passenger age, gender, and class. Here's a summary of the logistic regression model:
 
-```python
+   ```python
    # Prepare the data for logistic regression
    X = pd.get_dummies(titanic_df[['Title', 'Pclass', 'Age']], columns=['Title'], drop_first=True)
    y = titanic_df['Survived']
