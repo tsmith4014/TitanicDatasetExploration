@@ -59,10 +59,10 @@ To run the analysis code and explore the project, follow these steps:
 3. Run the Jupyter Notebook or Python scripts to execute the analysis.
 4. Explore the generated visualizations and insights.
 
-##Requirements 
+## Requirements 
   Python 3.x
   Jupyter Notebook (optional)
   Libraries listed in requirements.txt
 
-##License
+## License
 This project is licensed under the MIT License. You are free to use, modify, or distribute this code for any purpose.
