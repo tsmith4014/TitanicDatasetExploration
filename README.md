@@ -8,8 +8,7 @@ This project provides an analysis of the Titanic dataset, exploring factors that
 - [Dataset Overview](#dataset-overview)
 - [Analysis and Insights](#analysis-and-insights)
 - [Usage](#usage)
-- [Requirements](#requirements)
-- [License](#license)
+
 
 ## Introduction
 
@@ -82,10 +81,3 @@ We fitted a logistic regression model to predict survival. This model takes into
    # Get the summary of the logistic regression
    print(logit_results.summary())
 
-## Requirements 
-  1. Python 3.x
-  2. Jupyter Notebook, optional 
-  3. Libraries listed in requirements.txt
-
-## License
-This project is licensed under the MIT License. You are free to use, modify, or distribute this code for any purpose.
