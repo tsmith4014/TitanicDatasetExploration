@@ -73,17 +73,16 @@ These titles add depth to the analysis of the Titanic dataset and can help resea
 
 To run the analysis code and explore the project, follow these steps:
 
-1. Clone this GitHub repository:
-
+1. Set up your virtual env
    ```bash
+   python -m venv venv
+   source venv/bin/activate
    git clone https://github.com/your-username/titanic-dataset-analysis.git
    cd titanic-dataset-analysis
    pip install -r requirements.txt
-   ```
 
-2. Make sure the .csv is in the directory if not its easy found on kaggle
-3. Run the Jupyter Notebook or Python scripts to execute the analysis.
-4. Explore the generated visualizations and insights.
+2. Using VScode/Python to execute the analysis.
+3. Explore the generated visualizations and insights.
 
 ## Predictive Models
 
