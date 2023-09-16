@@ -59,6 +59,29 @@ To run the analysis code and explore the project, follow these steps:
 3. Run the Jupyter Notebook or Python scripts to execute the analysis.
 4. Explore the generated visualizations and insights.
 
+## Predictive Models
+
+In this project, we've created two predictive models to estimate the likelihood of survival for Titanic passengers based on various features:
+
+### Logistic Regression
+
+We fitted a logistic regression model to predict survival. This model takes into account passenger age, gender, and class. Here's a summary of the logistic regression model:
+
+```python
+   # Prepare the data for logistic regression
+   X = pd.get_dummies(titanic_df[['Title', 'Pclass', 'Age']], columns=['Title'], drop_first=True)
+   y = titanic_df['Survived']
+   
+   # Add a constant to the independent variables (intercept)
+   X_with_const = sm.add_constant(X)
+   
+   # Fit the logistic regression model
+   logit_model = sm.Logit(y, X_with_const)
+   logit_results = logit_model.fit()
+   
+   # Get the summary of the logistic regression
+   print(logit_results.summary())
+
 ## Requirements 
   1. Python 3.x
   2. Jupyter Notebook, optional 
