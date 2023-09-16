@@ -91,21 +91,51 @@ In this project, we've created two predictive models to estimate the likelihood 
 
 ### Logistic Regression
 
-We fitted a logistic regression model to predict survival. This model takes into account passenger age, gender, and class. Here's a summary of the logistic regression model:
+We fitted a logistic regression model to predict survival. This model takes into account passenger age, gender, class, and fare. Here's a summary of the logistic regression model::
 
 ```python
-# Prepare the data for logistic regression
-X = pd.get_dummies(titanic_df[['Title', 'Pclass', 'Age']], columns=['Title'], drop_first=True)
+X = titanic_df[['Sex', 'Pclass', 'Age', 'Fare']]
+X = sm.add_constant(X)  # Add a constant for the intercept
 y = titanic_df['Survived']
 
-# Add a constant to the independent variables (intercept)
-X_with_const = sm.add_constant(X)
+# Fit logistic regression model
+logistic_model = sm.Logit(y, X)
+logistic_results = logistic_model.fit()
 
-# Fit the logistic regression model
-logit_model = sm.Logit(y, X_with_const)
+# Get the summary of the logistic regression to view coefficients
+coefficients_summary = logistic_results.summary()
+
+print(coefficients_summary)
+
+```
+
+The output provides insights into the impact of each variable on survival.
+
+Logistic Regression with 'Age' and 'Fare' as Predictors
+We also explored a logistic regression model using only 'Age' and 'Fare' as predictors to investigate their influence on survival:
+
+```python
+# Add a constant to the independent variables (intercept)
+X_with_const = sm.add_constant(titanic_df[['Age', 'Fare']])
+logit_model = sm.Logit(titanic_df['Survived'], X_with_const)
 logit_results = logit_model.fit()
 
 # Get the summary of the logistic regression
 print(logit_results.summary())
 
+```
+
+This model focuses on age and fare's effect on survival.
+
+Logistic Regression Model with Titles
+We examined how passenger titles influenced survival rates. Here's how to perform this analysis:
+
+```python
+# Extract titles from passenger names
+titanic_df['Title'] = titanic_df['Name'].str.extract(' ([A-Za-z]+)\.')
+
+# Analyze survival rates by title
+title_survival_rates = titanic_df.groupby('Title')['Survived'].mean().sort_values(ascending=False)
+
+# Visualize survival rates by title
 ```
