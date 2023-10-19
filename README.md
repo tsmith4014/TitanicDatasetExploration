@@ -1,6 +1,6 @@
 # Titanic Dataset Analysis
 
-This project provides an analysis of the Titanic dataset, exploring factors that may have influenced the survival of passengers on the Titanic. The dataset contains information about passengers, including their age, gender, passenger class, fare, and whether they survived or not.
+This repository houses an in-depth analysis of the Titanic dataset, offering valuable insights into the survival of passengers onboard the ill-fated RMS Titanic. The project leverages statistical tests, data visualizations, and machine learning models to understand the interplay of various passenger attributes like age, gender, and class with their chances of survival. It also extends the analysis by focusing on the influence of unique attributes like passenger titles, which provides an additional layer of depth to the survival factors.
 
 ## Table of Contents
 
